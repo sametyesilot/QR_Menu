@@ -1,0 +1,64 @@
+===== QR MENÜ SİSTEMİ BAŞLATMA KILAVUZU =====
+
+Bu kılavuz, sisteminizde Node.js'in düzgün çalışmadığı durumlarda QR Menü Sisteminin 
+nasıl başlatılacağını gösterir.
+
+1. ÖNEMLİ: NODE.JS KURULUMU KONTROL EDİN
+=========================================
+
+Aşağıdaki adımları izleyerek Node.js'in düzgün kurulu olduğundan emin olun:
+
+a) Windows'ta "Node.js" uygulamasını aratarak bulun ve açın.
+b) Eğer bulunamıyorsa, Node.js'i şu adresden indirip kurun: https://nodejs.org/
+c) Kurulum sırasında "Add to PATH" seçeneğinin işaretli olduğundan emin olun.
+d) Kurulum tamamlandıktan sonra bilgisayarınızı MUTLAKA YENİDEN BAŞLATIN.
+
+2. MANUEL BAŞLATMA YÖNTEMİ
+==========================
+
+Aşağıdaki adımları sırayla izleyin:
+
+ADIM 1: BACKEND'İ BAŞLATIN
+--------------------------
+1. Windows aramasında "komut istemi" veya "cmd" yazın ve NORMAL KOMUT İSTEMİ'ni açın (PowerShell değil).
+2. Aşağıdaki komutu yazın:
+   cd "C:\Users\Samet\Desktop\proje 2\qr-menu-system\backend"
+3. Ardından şunu yazın:
+   npm install
+4. Sonra şunu yazın:
+   npm start
+
+Backend başladığında "Server 5000 portunda çalışıyor" benzeri bir mesaj görmelisiniz.
+BU PENCERE AÇIK KALMALI!
+
+ADIM 2: YENİ BİR KOMUT İSTEMİ AÇIN
+----------------------------------
+Yeni bir komut istemi penceresi açın.
+
+ADIM 3: FRONTEND'İ BAŞLATIN
+--------------------------
+1. Yeni pencerede şunu yazın:
+   cd "C:\Users\Samet\Desktop\proje 2\qr-menu-system\frontend"
+2. Ardından şunu yazın:
+   npm install
+3. Sonra şunu yazın:
+   npm start
+
+Frontend başladığında tarayıcınız otomatik olarak açılmalı ve uygulamayı göstermelidir.
+Açılmazsa: http://localhost:3000 adresini tarayıcıda açın.
+
+ÖNEMLİ NOTLAR:
+=============
+* Her iki terminal penceresi de açık kalmalıdır.
+* Uygulamayı durdurmak için Ctrl+C tuşlarına basın veya terminal pencerelerini kapatın.
+* Node.js yolu sorunu için, Windows'tan "Sistem Özellikleri" > "Gelişmiş Sistem Ayarları" > 
+  "Ortam Değişkenleri" > "Path" üzerinden Node.js kurulum dizinini ekleyin.
+
+YARDIM İÇİN:
+===========
+Eğer sorun devam ederse, lütfen projenin geliştiricilerine başvurun veya
+aşağıdaki adımları deneyin:
+
+1. Node.js'i kaldırıp yeniden kurun
+2. Windows PATH değişkenlerini güncelleyin
+3. Yeni bir komut istemiyle deneyin (PowerShell yerine CMD kullanın) 

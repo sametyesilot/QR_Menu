@@ -1,0 +1,32 @@
+QR MENÜ SİSTEMİ BAŞLATMA TALİMATLARI
+======================================
+
+PowerShell'de && operatörü çalışmadığı için aşağıdaki yöntemlerden birini kullanın:
+
+YOL 1: KESİN ÇÖZÜM - DOSYAYA SAĞ TIKLAYIN VE "KOMUT İSTEMİNDE ÇALIŞTIR" SEÇENEĞİNİ KULLANIN
+-------------------------------------------------------------------------------------------
+1. Windows dosya gezgininde "starter.cmd" dosyasına sağ tıklayın
+2. "Komut İsteminde Çalıştır" (Command Prompt) seçeneğini seçin
+3. Sistem otomatik olarak başlayacaktır
+
+YOL 2: KOMUT İSTEMİ İLE MANUEL BAŞLATMA
+--------------------------------------
+1. Windows aramasına "cmd" yazın ve Komut İstemi (Command Prompt) programını açın
+2. Aşağıdaki komutu yazın (yolu kopyalayıp yapıştırabilirsiniz):
+   cd "C:\Users\Samet\Desktop\proje 2\qr-menu-system"
+3. Ardından şunu yazın:
+   starter.cmd
+4. Sistem başlayacaktır
+
+ÖNEMLİ NOT: PowerShell kullanmakta ısrar ediyorsanız:
+----------------------------------------------------
+PowerShell'de && operatörü çalışmaz. Bu nedenle, komutları tek tek çalıştırmanız gerekir:
+1. PowerShell'de şunu yazın:
+   cd "C:\Users\Samet\Desktop\proje 2\qr-menu-system"
+2. Ardından sırayla şunları yazın:
+   cd backend
+   npm run dev
+3. Yeni bir PowerShell penceresi açın ve şunları yazın:
+   cd "C:\Users\Samet\Desktop\proje 2\qr-menu-system"
+   cd frontend
+   npm start 

@@ -1,0 +1,56 @@
+QR MENÜ SİSTEMİ - NODE.JS SORUN ÇÖZÜMLERİ
+==========================================
+
+Bu belge, QR Menü Sistemi kullanırken karşılaşabileceğiniz Node.js ile ilgili sorunların çözümlerini içerir.
+
+## PowerShell'de "&&" Operatörü Hatası
+
+PowerShell'de çalıştırma sırasında aşağıdaki hatayı alıyorsanız:
+```
+The token '&&' is not a valid statement separator in this version.
+```
+
+Bu, PowerShell'in cmd gibi "&&" operatörünü desteklememesinden kaynaklanır. Çözüm için:
+
+1. Komut İstemi (cmd) kullanın ve orada start.bat dosyasını çalıştırın
+2. Veya PowerShell'de şu komutları ayrı ayrı çalıştırın:
+   ```
+   cd qr-menu-system/backend
+   npm run dev
+   ```
+   Yeni bir PowerShell penceresi açıp:
+   ```
+   cd qr-menu-system/frontend
+   npm start
+   ```
+
+## "npm is not recognized" Hatası
+
+Node.js kurulu olmasına rağmen bu hatayı alıyorsanız, PATH değişkeninde Node.js dizini bulunmuyor olabilir.
+Hızlı çözüm için:
+
+1. 'node-path-fix.bat' dosyasını çalıştırın
+2. Açılan komut isteminden:
+   - 'run-backend.bat' ve yeni bir pencerede 'run-frontend.bat' çalıştırın VEYA
+   - 'start-cmd.bat' çalıştırın
+
+Kalıcı çözüm için:
+1. Node.js'i yeniden kurun ve kurulum sırasında "Add to PATH" seçeneğini işaretleyin
+2. Veya Windows'da Sistem Özellikleri > Gelişmiş Sistem Ayarları > Ortam Değişkenleri kısmından PATH değişkenine Node.js kurulum dizinini ekleyin (genellikle C:\Program Files\nodejs)
+3. Bilgisayarınızı yeniden başlatın
+
+## Yine Çalışmazsa
+
+1. Node.js'i kaldırın ve tekrar kurun
+2. Kurulum sırasında "Automatically install the necessary tools" seçeneğini işaretleyin
+3. Kurulum tamamlandıktan sonra bilgisayarınızı yeniden başlatın
+4. Windows Komut İstemi (cmd) açın, proje dizinine gidin ve şu komutları çalıştırın:
+   ```
+   cd qr-menu-system\backend
+   npm install
+   ```
+
+   ```
+   cd qr-menu-system\frontend
+   npm install
+   ``` 
